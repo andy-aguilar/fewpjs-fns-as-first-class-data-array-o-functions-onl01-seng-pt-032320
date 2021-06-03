@@ -27,13 +27,13 @@ var unleashDog = function(dogName="Byron", dogBreed="poodle") {
   console.log(`Unleash ${dogName} the ${dogBreed}`);
   return `Unleash ${dogName} the ${dogBreed}`
 }
-
+// routine is an array of names of the functions
 const routine = [wakeDog,leashDog,walkToPark,throwFrisbee,walkHome,unleashDog]
 
-
+// exerciseDog function calls each independent function from routine
 function exerciseDog(dogName, dogBreed) {
     for (let i = 0; i < routine.length; i++) {
-        console.log(routine[i]);
+        console.log(routine[i](dogName, dogBreed));
     }
 }
 
